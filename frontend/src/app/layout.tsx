@@ -11,11 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://z-bank.com"),
   title: {
-    default: "Z-Bank — Modern Digital Banking | by Nikita Fesenko",
+    default: "Z-Bank — Modern Digital Banking | by Moritz Müller",
     template: "%s | Z-Bank",
   },
   description:
-    "Z-Bank is an innovative digital bank with instant transfers, robust security, and a modern interface. Developed by Nikita Fesenko.",
+    "Z-Bank is an innovative digital bank with instant transfers, robust security, and a modern interface. Developed by Moritz Müller.",
   keywords: [
     "bank",
     "digital bank",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "transfers",
     "fintech",
     "Z-Bank",
-    "Nikita Fesenko",
+    "Moritz Müller",
   ],
-  authors: [{ name: "Nikita Fesenko" }],
-  creator: "Nikita Fesenko",
+  authors: [{ name: "Moritz Müller" }],
+  creator: "Moritz Müller",
   publisher: "Z-Bank",
   robots: {
     index: true,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Z-Bank",
     title: "Z-Bank — Modern Digital Banking",
     description:
-      "Innovative digital bank with instant transfers and robust security. Developed by Nikita Fesenko.",
+      "Innovative digital bank with instant transfers and robust security. Developed by Moritz Müller.",
     images: [
       {
         url: "/og-image.png",
@@ -98,7 +98,7 @@ export default function RootLayout({
               logo: "https://z-bank.com/logo.png",
               founder: {
                 "@type": "Person",
-                name: "Nikita Fesenko",
+                name: "Moritz Müller",
               },
               areaServed: "Worldwide",
               serviceType: "Digital Banking",

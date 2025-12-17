@@ -4,7 +4,7 @@
 
 ### Modern Digital Banking Platform
 
-**Built by Nikita Fesenko**
+**Built by Moritz Müller**
 
 [![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4-green?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
@@ -246,7 +246,7 @@ This project is licensed under the MIT License.
 
 <div align="center">
 
-**Made with ❤️ by Nikita Fesenko**
+**Made with ❤️ by Moritz Müller**
 
 [⬆ Back to top](#-z-bank)
 

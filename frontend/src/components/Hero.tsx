@@ -100,7 +100,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-slate-400 font-light">
             by{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-medium">
-              Nikita Fesenko
+              Moritz Müller
             </span>
           </p>
         </motion.div>
