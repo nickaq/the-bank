@@ -14,7 +14,7 @@
 
 <br/>
 
-![Z-Bank Preview](docs/assets/demo.webp)
+![Z-Bank Preview](docs/assets/preview.png)
 
 </div>
 
