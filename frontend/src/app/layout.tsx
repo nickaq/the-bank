@@ -11,22 +11,22 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://z-bank.com"),
   title: {
-    default: "Z-Bank — Современный цифровой банк | by Никита Фесенко",
+    default: "Z-Bank — Modern Digital Banking | by Nikita Fesenko",
     template: "%s | Z-Bank",
   },
   description:
-    "Z-Bank — инновационный цифровой банк с мгновенными переводами, надежной защитой и современным интерфейсом. Разработано Никитой Фесенко.",
+    "Z-Bank is an innovative digital bank with instant transfers, robust security, and a modern interface. Developed by Nikita Fesenko.",
   keywords: [
-    "банк",
-    "цифровой банк",
-    "онлайн банкинг",
-    "переводы",
-    "финтех",
+    "bank",
+    "digital bank",
+    "online banking",
+    "transfers",
+    "fintech",
     "Z-Bank",
-    "Никита Фесенко",
+    "Nikita Fesenko",
   ],
-  authors: [{ name: "Никита Фесенко" }],
-  creator: "Никита Фесенко",
+  authors: [{ name: "Nikita Fesenko" }],
+  creator: "Nikita Fesenko",
   publisher: "Z-Bank",
   robots: {
     index: true,
@@ -41,26 +41,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "ru_RU",
+    locale: "en_US",
     url: "https://z-bank.com",
     siteName: "Z-Bank",
-    title: "Z-Bank — Современный цифровой банк",
+    title: "Z-Bank — Modern Digital Banking",
     description:
-      "Инновационный цифровой банк с мгновенными переводами и надежной защитой. Разработано Никитой Фесенко.",
+      "Innovative digital bank with instant transfers and robust security. Developed by Nikita Fesenko.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Z-Bank — Цифровой банк нового поколения",
+        alt: "Z-Bank — Next Generation Digital Banking",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z-Bank — Современный цифровой банк",
+    title: "Z-Bank — Modern Digital Banking",
     description:
-      "Инновационный цифровой банк с мгновенными переводами и надежной защитой.",
+      "Innovative digital bank with instant transfers and robust security.",
     images: ["/og-image.png"],
     creator: "@zbank",
   },
@@ -81,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className="dark">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -93,12 +93,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "FinancialService",
               name: "Z-Bank",
-              description: "Современный цифровой банк с мгновенными переводами",
+              description: "Modern digital bank with instant transfers",
               url: "https://z-bank.com",
               logo: "https://z-bank.com/logo.png",
               founder: {
                 "@type": "Person",
-                name: "Никита Фесенко",
+                name: "Nikita Fesenko",
               },
               areaServed: "Worldwide",
               serviceType: "Digital Banking",

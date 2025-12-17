@@ -100,7 +100,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-slate-400 font-light">
             by{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-medium">
-              Никита Фесенко
+              Nikita Fesenko
             </span>
           </p>
         </motion.div>
@@ -110,8 +110,8 @@ export default function Hero() {
           variants={itemVariants}
           className="max-w-md text-lg text-slate-500"
         >
-          Современный банкинг для современного мира.
-          Безопасно. Быстро. Глобально.
+          Modern banking for the modern world.
+          Secure. Fast. Global.
         </motion.p>
 
         {/* Feature badges */}
@@ -130,21 +130,30 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* CTA Button */}
-        <motion.div variants={itemVariants} className="mt-8">
-          <motion.button
+        {/* CTA Buttons */}
+        <motion.div variants={itemVariants} className="mt-8 flex gap-4">
+          <motion.a
+            href="/login"
             className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg shadow-lg shadow-indigo-500/25 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className="relative z-10">Начать</span>
+            <span className="relative z-10">Get Started</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500"
               initial={{ x: "-100%" }}
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.a>
+          <motion.a
+            href="/login"
+            className="px-8 py-4 rounded-full border border-slate-600 text-slate-300 font-semibold text-lg hover:bg-slate-800/50 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Sign In
+          </motion.a>
         </motion.div>
       </motion.div>
 
