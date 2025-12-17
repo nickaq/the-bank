@@ -145,4 +145,14 @@ public class CustomerService {
         customer = customerRepository.save(customer);
         return CustomerResponse.from(customer);
     }
+
+    @Transactional
+    public CustomerResponse linkCustomerToUser(UUID customerId, User user) {
+        Customer customer = customerRepository.findById(customerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", customerId.toString()));
+
+        customer.setUser(user);
+        customer = customerRepository.save(customer);
+        return CustomerResponse.from(customer);
+    }
 }

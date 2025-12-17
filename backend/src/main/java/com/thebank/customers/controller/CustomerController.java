@@ -6,6 +6,8 @@ import com.thebank.customers.dto.UpdateCustomerRequest;
 import com.thebank.customers.entity.CustomerStatus;
 import com.thebank.customers.service.CustomerService;
 import com.thebank.identity.entity.User;
+import com.thebank.identity.repository.UserRepository;
+import com.thebank.common.exception.ResourceNotFoundException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -28,9 +30,11 @@ import java.util.UUID;
 public class CustomerController {
 
     private final CustomerService customerService;
+    private final UserRepository userRepository;
 
-    public CustomerController(CustomerService customerService) {
+    public CustomerController(CustomerService customerService, UserRepository userRepository) {
         this.customerService = customerService;
+        this.userRepository = userRepository;
     }
 
     // ==================== Admin Endpoints ====================
@@ -93,6 +97,18 @@ public class CustomerController {
         return ResponseEntity.ok(customerService.activateCustomer(id));
     }
 
+    @PostMapping("/admin/customers/{id}/link-user")
+    @PreAuthorize("hasRole('ADMIN')")
+    @Operation(summary = "Link customer to a user account (Admin only)")
+    public ResponseEntity<CustomerResponse> linkToUser(
+            @PathVariable UUID id,
+            @RequestParam String email
+    ) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User", email));
+        return ResponseEntity.ok(customerService.linkCustomerToUser(id, user));
+    }
+
     // ==================== Client Endpoints ====================
 
     @GetMapping("/me")
@@ -101,3 +117,4 @@ public class CustomerController {
         return ResponseEntity.ok(customerService.getCustomerByUserId(user.getId()));
     }
 }
+
